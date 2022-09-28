@@ -5,6 +5,7 @@ Szoft-II-N
 */
 
 const calcButton = document.querySelector('#calcButton');
+const eredmeny = document.querySelector('#eredmeny');
 
 calcButton.addEventListener('click', () => {
     const base = document.querySelector('#base') as HTMLInputElement;
@@ -12,7 +13,8 @@ calcButton.addEventListener('click', () => {
     let baseNum: number = Number(base.value);
     let heightNum: number = Number(height.value);
     let area = calcArea(baseNum, heightNum);
-    alert(area);
+    eredmeny.textContent = String(area);
+    /*alert(area);*/
 });
 
 function calcArea(base: number, height: number):number {
